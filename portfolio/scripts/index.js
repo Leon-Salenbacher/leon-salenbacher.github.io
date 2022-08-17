@@ -1,4 +1,4 @@
-/* slect elements */
+/*  slect elements  */
 const quote1_el = document.getElementById("quote1").querySelectorAll('h1')
 const quote2_el = document.getElementById("quote2").querySelectorAll('h1, img')
 const project_img = document.getElementById("project_img")
