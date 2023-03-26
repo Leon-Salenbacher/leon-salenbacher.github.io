@@ -1,0 +1,110 @@
+#project-container{
+    display: flex;
+    
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    height: 48.3vw;
+    max-height: 100vh;  
+    min-height: 500px;  
+
+    #project-show-container{
+        $max-height: 540px;
+        width: 50%;
+        height: 60%;
+        height: 28vw;
+        max-height: $max-height;
+        min-height: 204px;
+        max-width: 960px;
+        min-width: 356px;
+        /* margin-top: 7vw; */
+        margin-top: 100px;
+
+        #project-title-container{
+            justify-content: center;
+            display: flex;
+            margin-bottom: 2%;
+            align-items: center;
+
+            h2{
+                text-align: center;
+                font-size: 25px;
+
+                font-size: clamp(12px, 1.35vw, 25px);
+                font-weight: 400;
+                margin: 0 clamp(12px, 1.35vw, 30px);
+            }
+
+            img{
+                width: 5vw;
+                min-width: 50px;
+                max-width: 130px;
+            }
+
+        }
+
+        #project-show{
+            cursor: pointer;
+            border: solid;
+            width: 100%;
+            height: 90%;
+            background-color: black;
+            border-radius: 8px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            img{
+                /* width: 100%; */
+                height: auto;
+                max-height: 100%;
+                width: auto;
+                max-width: 100%;
+            }
+        }
+
+        #slider-container{
+            margin-top: 25px;
+            height: 10%;
+            display: flex;
+            justify-content: center;
+            align-items: flex-end;
+
+            #slider{
+                display: grid;
+                grid-template-columns: repeat(5, 1fr);
+                grid-template-rows: 1fr;
+                grid-column-gap: 0px;
+                grid-row-gap: 30px; 
+                width: 24%;
+
+                .slider-item-container{
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    cursor: pointer;
+
+                    .slider-item{
+                        $size: 21px;
+                        $size: 50%;
+                        
+                        border: 2px solid black;
+                        border-radius: 100px;
+                        /* width: calc($size /2);
+                        height: $size; */
+    
+                        height: $size;
+                        width: 0;
+                        padding: calc($size / 2);
+
+                        background-color: transparent;
+                    }
+
+                    .selected{
+                        background-color: black;
+                    }
+                }
+            }
+        }
+    }
+}
